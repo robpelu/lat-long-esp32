@@ -1,7 +1,8 @@
 <? php
 
       // esp32/pepito.php?nombre=Robert pepe
-    
+echo "desde getpos.php";
+
 $servername = "ec2-3-230-106-126.compute-1.amazonaws.com";
 $database = "d98hug03gf3jbf";
 $username = "admvldptvsgixj";
