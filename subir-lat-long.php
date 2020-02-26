@@ -6,8 +6,8 @@ $username = "wcnixkgpgenwpj";
 $password = "cedbc8cac210d374fb88bcfb21b5dfc31c1034f0567a88fd569a4326fd1e0373";
 
 $espid = $_GET["espid"]; //igual a nombre en consulta "select"
-$espid = $_GET["lat"]; //igual a nombre en consulta "select"
-$espid = $_GET["long"]; //igual a nombre en consulta "select"
+$lat = $_GET["lat"]; //igual a nombre en consulta "select"
+$long = $_GET["long"]; //igual a nombre en consulta "select"
 
 // Conectando y seleccionado la base de datos  
 $dbconn = pg_connect("host=" . $servername . " dbname=" . $database . " user=". $username . " password=" . $password)
