@@ -24,8 +24,9 @@ $row = pg_fetch_array($result, null, PGSQL_ASSOC);
 
 
 //echo json_encode($myArray);
-
-header("Location: http://maps.google.com/maps?q=" . $lat . "," . $long . ");
+$redir = "Location: http://maps.google.com/maps?q=" . $lat . "," . $long . "
+echo $redir;
+header($redir);
 
 
 // Liberando el conjunto de resultados
