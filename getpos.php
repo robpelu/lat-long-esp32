@@ -1,4 +1,4 @@
-<? php
+<?php
 
       // esp32/pepito.php?nombre=Robert pepe
 echo "desde getpos.php";
