@@ -15,12 +15,17 @@ $dbconn = pg_connect("host=" . $servername . " dbname=" . $database . " user=". 
 // Realizando una consulta SQL
 $query = "select * from location where espid = '" . $espid . "'" ;
 $result = pg_query($query) or die('La consulta fallo: ' . pg_last_error());
-while($row = pg_fetch_array($result, null, PGSQL_ASSOC)) {
-         $myArray[] = $row;
-}
+
+$row = pg_fetch_array($result, null, PGSQL_ASSOC);
+$row = pg_fetch_array($result, null, PGSQL_ASSOC);
+$lat = pg_fetch_array($result, null, PGSQL_ASSOC);
+$long = pg_fetch_array($result, null, PGSQL_ASSOC);
+$row = pg_fetch_array($result, null, PGSQL_ASSOC);
+
+
 //echo json_encode($myArray);
 
-header("Location: http://maps.google.com/maps?q=24.197611,120.780512");
+header("Location: http://maps.google.com/maps?q=" . $lat . "," . $long . ");
 
 
 // Liberando el conjunto de resultados
