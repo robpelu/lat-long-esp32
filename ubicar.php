@@ -17,8 +17,8 @@ $query = "select * from location where espid = '" . $espid . "'" ;
 $result = pg_query($query) or die('La consulta fallo: ' . pg_last_error());
 
 $row = pg_fetch_array($result, null, PGSQL_ASSOC);
-$lat = $row["lat"]
-$long = $row["long"]
+$lat = $row["lat"];
+$long = $row["long"];
 
 //echo json_encode($myArray);
 $redir = "Location: http://maps.google.com/maps?q=" . $lat . "," . $long;
