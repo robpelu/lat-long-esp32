@@ -16,6 +16,7 @@ $dbconn = pg_connect("host=" . $servername . " dbname=" . $database . " user=". 
 
 // Realizando una consulta SQL
 $query = "SELECT * FROM location where espid like '" . $espid . "' " ;
+echo $query;
 $result = pg_query($query) or die('La consulta fallo: ' . pg_last_error());
 
 while($row = pg_fetch_array($result, null, PGSQL_ASSOC)) {
