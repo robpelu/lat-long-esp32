@@ -14,7 +14,7 @@ $dbconn = pg_connect("host=" . $servername . " dbname=" . $database . " user=". 
     or die('Error - No se ha podido conectar: ' . pg_last_error());
 
 // Realizando una consulta SQL
-$query = "insert into location (espid, lat, long, timestamp) values (". $espid . "," . $lat . "," . $long . ", 01/01/2020 19:00)";
+$query = "insert into location (espid, lat, long, timestamp) values ('". $espid . "','" . $lat . "','" . $long . "', '01/01/2020 19:00')";
 $result = pg_query($query) or die('El Insert ha fallado: ' . pg_last_error());
 
 echo "Insert exitoso !!";
