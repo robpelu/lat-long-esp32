@@ -18,7 +18,10 @@ $result = pg_query($query) or die('La consulta fallo: ' . pg_last_error());
 while($row = pg_fetch_array($result, null, PGSQL_ASSOC)) {
          $myArray[] = $row;
 }
-echo json_encode($myArray);
+//echo json_encode($myArray);
+
+header("Location: http://maps.google.com/maps?q=24.197611,120.780512");
+
 
 // Liberando el conjunto de resultados
 pg_free_result($result);
