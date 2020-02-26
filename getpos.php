@@ -2,10 +2,10 @@
 
       // esp32/pepito.php?nombre=Robert pepe
     
-$servername = "ec2-52-202-185-87.compute-1.amazonaws.com";
-$database = "d79gdtjvldehc6";
-$username = "tsmjrcqunicnlx";
-$password = "156c2dadd79b76cf6782243d0c90c1af4f3003ae32a1d0c12157f815517db330";
+$servername = "ec2-3-230-106-126.compute-1.amazonaws.com";
+$database = "d98hug03gf3jbf";
+$username = "admvldptvsgixj";
+$password = "dda02d15d6dbdf29208030b308018406237112162a8b4d65acbb0c185c83798f";
 
 espid = $_GET['espid'];
 
