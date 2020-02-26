@@ -13,7 +13,7 @@ $dbconn = pg_connect("host=" . $servername . " dbname=" . $database . " user=". 
     or die('Error - No se ha podido conectar: ' . pg_last_error());
 
 // Realizando una consulta SQL
-$query = "select * from location where espid = '" . $espid . "'" ;
+$query = "select * from location where espid = '" . $espid . "' order by id desc" ;
 $result = pg_query($query) or die('La consulta fallo: ' . pg_last_error());
 
 $row = pg_fetch_array($result, null, PGSQL_ASSOC);
